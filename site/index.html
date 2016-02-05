@@ -30,6 +30,30 @@
         </div>
       </div>
     </header>
+    <svg xmlns="http://www.w3.org/2000/svg" class="is-hidden">
+      <symbol id="tr-left">
+        <polygon points="0,0 100,12 100,13 0,13" fill="#fff"></polygon>
+      </symbol>
+      <symbol id="tr-right">
+        <polygon points="100,0 0,12 0,13 100,13" fill="#fff"></polygon>
+      </symbol>
+    </svg>
+    <!-- begin main-slider-->
+    <section class="main-slider">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 13" class="tr-left">
+        <use xlink:href="#tr-left"></use>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 13" class="tr-right">
+        <use xlink:href="#tr-right"></use>
+      </svg>
+      <!-- bottom-wrap-->
+      <div class="bottom-wrap"></div>
+      <!-- bottom-btn--><a href="#" class="bottom-btn"><i class="icon-btm"></i></a>
+    </section>
+    <!-- end main-slider-->
+    <!-- begin list-->
+    <section class="list"></section>
+    <!-- end list-->
     <script src="js/lib/head.js" data-headjs-load="js/app.js"></script>
   </body>
 </html>

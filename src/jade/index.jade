@@ -2,3 +2,20 @@ extend includes/layout
 block title
 	title Bino
 block content
+	include includes/svg_tr_left
+	// begin main-slider
+	section.main-slider
+		svg(xmlns="http://www.w3.org/2000/svg" class="tr-left" viewbox="0 0 100 13")
+			use(xlink:href="#tr-left")
+		svg(xmlns="http://www.w3.org/2000/svg" class="tr-right" viewbox="0 0 100 13")
+			use(xlink:href="#tr-right")
+		// bottom-wrap
+		.bottom-wrap
+		// bottom-btn
+		a(href="#").bottom-btn
+			i.icon-btm
+	// end main-slider
+	// begin list
+	section.list
+		
+	// end list

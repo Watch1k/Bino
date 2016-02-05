@@ -23,6 +23,8 @@ a
 svg
 	width: 100%
 	height: 100%
+.is-hidden
+	display: none
 body
 	min-width: 320px
 	font-family: $default-fonts
@@ -40,9 +42,20 @@ body
 .row
 	+pie-clearfix
 .header
-	background-color: #ccc
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
 	padding-top: 40px
 	padding-bottom: 40px
+	background-color: transparent
+	z-index: 1000
+	transition: all 0.3s
+	&.is-fixed
+		padding-top: 5px
+		padding-bottom: 5px
+		background-color: rgba(0,0,0,.5)
+		transition: all 0.3s
 .logo
 	float: left
 	font-family: $sans-b
@@ -109,4 +122,68 @@ body
 					left: 0
 					width: 100%
 					transition: all 0.5s
-					
+/* Main Slider */
+.main-slider
+	position: relative
+	height: calc(100% - 25px)
+	background-color: #c5ac7f
+	/* triangles */
+	.tr-left, .tr-right
+		z-index: 1
+		position: absolute
+		bottom: -1px
+		height: auto
+		width: calc(50% + 2px)
+	.tr-left
+		left: 0
+	.tr-right
+		right: 0
+	.bottom-wrap
+		position: absolute
+		left: 50%
+		bottom: -25px
+		margin-left: -37px
+		width: 74px
+		height: 74px
+		border-radius: 50%
+		border: 4px solid rgba(255,255,255,.5)
+		animation: color 2s infinite
+	.bottom-btn
+		position: absolute
+		left: 50%
+		bottom: -21px
+		margin-left: -33px
+		width: 66px
+		height: 66px
+		border-radius: 50%
+		background-color: #F4F5F9
+		z-index: 2
+		transition: all 0.3s
+		.icon-btm
+			position: absolute
+			top: 50%
+			left: 50%
+			animation: move 2s infinite
+		&:hover
+			box-shadow: 0 0 5px 2px rgba(0,0,0,.5)
+			transition: all 0.3s
+@keyframes color
+	0%
+		border-color: rgba(255,255,255,.5)
+	50%
+		border-color: rgba(255,255,255,0)
+	100%
+		border-color: rgba(255,255,255,.5)
+@keyframes move
+	0%
+		transform: translate(-50%, -65%)
+	50%
+		transform: translate(-50%, -35%)
+	100%
+		transform: translate(-50%, -65%)
+/* List */
+.list
+	position: relative
+	z-index: 1
+	height: 500px
+	background-color: #fff
