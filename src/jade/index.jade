@@ -1,21 +1,71 @@
-extend includes/layout
+extend includes/_layout
+
 block title
 	title Bino
+
 block content
-	include includes/svg_tr_left
+	include includes/_svg_tr_left
+	='\n'
 	// begin main-slider
 	section.main-slider
+		// begin slider
+		.slider
+			.slider-el
+				.slider-el__in
+					p.slider-el__desc.
+						Our Clients Are Our First Priority
+					p.slider-el__title.
+						Welcome to Bino
+					.slider__border
+						.slider__border-in
+					p.slider-el__text.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum iste animi magni, suscipit nobis sint voluptatem asperiores, sunt fugiat in enim, aspernatur nostrum veritatis repellat quasi modi neque. Fuga, vitae!
+					.row
+						a.slider-el__btn(href="#") Get Stardet Now
+						a.slider-el__btn(href="#") Learn More
+		// end slider
+		='\n'
 		svg(xmlns="http://www.w3.org/2000/svg" class="tr-left" viewbox="0 0 100 13")
 			use(xlink:href="#tr-left")
 		svg(xmlns="http://www.w3.org/2000/svg" class="tr-right" viewbox="0 0 100 13")
 			use(xlink:href="#tr-right")
+		='\n'
 		// bottom-wrap
 		.bottom-wrap
 		// bottom-btn
-		a(href="#").bottom-btn
-			i.icon-btm
+		a(href="#").bottom-btn: i.icon
 	// end main-slider
+	='\n'
 	// begin list
 	section.list
-		
+		.container
+			ul
+				li
+					.list__img
+						i.icon-laptop
+					p.list__title.
+						Sleek Design
+					p.list__text.
+						Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
+				li
+					.list__img
+						i.icon-heart-empty
+					p.list__title.
+						Clean Code
+					p.list__text.
+						Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
+				li
+					.list__img
+						i.icon-lightbulb
+					p.list__title.
+						Creative Ideas
+					p.list__text.
+						Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
+				li
+					.list__img
+						i.icon-chat-empty
+					p.list__title.
+						Free Support
+					p.list__text.
+						Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
 	// end list

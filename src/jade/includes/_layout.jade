@@ -10,10 +10,11 @@ html(lang="en")
 		<!-- <meta name="viewport" content="width=1200"> -->
 		<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
 		block css
+			link(rel="stylesheet", href="css/lib/fontello.css")
 			link(rel="stylesheet" media="all" href="css/screen.css")
 		<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	body
-		include head
+		include _head
 		block content
 		block js
 			script(src="js/lib/head.js" data-headjs-load="js/app.js")

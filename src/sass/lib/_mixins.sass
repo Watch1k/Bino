@@ -1,3 +1,8 @@
+// px to em
+$browser-context: 16
+@function em($pixels, $context: $browser-context)
+	@return #{$pixels/$context}em
+
 // clearfix
 =pie-clearfix
 	&:after
@@ -95,7 +100,6 @@
 // example
 // +arr(500,50, #000, l)
 // +arr(500,50, #000, bl)
-		height: 100%
 
 =vcenter
 	position: absolute
@@ -104,15 +108,24 @@
 	transform: translate(-50%,-50%)
 
 =vertical
-	font-size: 0
+	white-space: nowrap
 	&:before
 		content: ""
 		display: inline-block
 		vertical-align: middle
 		width: 0
 		height: 100%
+		margin-right: -0.25em
 
 =hide-text
 	font: 0/0 a
 	text-shadow: none
 	color: transparent
+=hidetext
+	+hide-text
+
+=text-overflow
+	overflow: hidden
+	-ms-text-overflow: ellipsis
+	text-overflow: ellipsis
+	white-space: nowrap
